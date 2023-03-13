@@ -1,6 +1,7 @@
 import { Row, Col } from 'react-bootstrap'
 import { ingredientsArray } from '../ingredients'
-// [{}, ..., {}]
+import IngredientCard from '../components/IngredientCard'
+
 const Store = () => {
     return (
       <>
@@ -8,7 +9,7 @@ const Store = () => {
         <Row xs={1} md={3} className="g-4">
           {ingredientsArray.map((ingredient, idx) => (
             <Col align ="center" key={idx}>
-              <h1>{ingredient.strIngredient}</h1>
+              <IngredientCard ingredient={ingredient} />
             </Col>
           ))}
         
